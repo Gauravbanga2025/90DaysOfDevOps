@@ -8,7 +8,7 @@ and basically automate the code and deploy the code with reliability, quick and 
 
  Currently I am working as a flutter developer in a private limited company.
  
- **4 Goals For Next 90 Days:- **
+ ** Goals For Next 90 Days:- **
   1. Hands on Practice on Each Things That Help Me To Troubleshooting and Deploy A Large Application on Cloud.
   2. Deploy At Least 2-3 Application one is small then one is moderate level and one is large scale application that based on at least 5 microservices
 
