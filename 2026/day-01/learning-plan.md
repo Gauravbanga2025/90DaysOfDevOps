@@ -19,4 +19,4 @@ and basically automate the code and deploy the code with reliability, quick and 
 
  6. Weekly Time
     1. Weekdays:- 1-2 hours/day
-    2. Weekends:- 3 hours/days
+    2. Weekends:- 3 hours/day
