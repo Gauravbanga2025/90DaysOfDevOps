@@ -23,6 +23,17 @@
 
    # If we print the statement with variable in double quotes (echo "") then the variables value executes successfully
    # If we print the statement with variables in single quotes (echo "") then the variables value prints as a simple text ($name stays $name)
-   
+
+3. # Created greet.sh file
+   file content
+   #!/bin/bash
+    echo "Enter Your Name"
+    read Name
+    echo "Enter Your Favourite Tool"
+    read Tool
+    echo "Which Tool You Have to Install"
+    read InstallTool
+    echo "Hello $Name My Favourite Tool is $Tool, Installing $InstallTool..."
+    sudo apt install $InstallTool  -y
 
    
