@@ -36,4 +36,37 @@
     echo "Hello $Name My Favourite Tool is $Tool, Installing $InstallTool..."
     sudo apt install $InstallTool  -y
 
+4. ## Create check_number.sh file
+    file content
+   #!/bin/bash
+  echo "Enter one Number"
+  read number
+    if (( $(echo "$number > 0" | bc -l) )); then
+           echo "Positive Number"
+   elif (( $(echo "$number == 0" | bc -l) )); then
+           echo "Number is Zero"
+   else
+           echo "Number is Negative"
+   fi
+   # Note:- bc -l finds the integer expression like any decimal value 28.5 etc
+
+   ## Created file_check.sh file
+     file content
+   #!/bin/bash
+      read -p "Enter File Name: " fileName
+      
+      if [ -f "$fileName" ]; then
+              echo "file exists."
+      
+      elif [ -d "$fileName" ]; then
+              echo "directory exists."
+      else
+              echo "File or Directory Does Not Exist"
+      
+      fi
+   # Note: This Script Find both File & Directory
+
+5. 
+
+
    
