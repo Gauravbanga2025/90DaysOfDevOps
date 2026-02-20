@@ -13,7 +13,8 @@
    # change the permission of the file with chmod +x hello.sh then execute it by ./hello.sh
    # and if you remove the shebang from the top then no change happened, shell script executed successfully
 
-2. # Created File variables.sh
+2. ## Created File variables.sh
+
    file content
    #!/bin/bash
     name="Gaurav"
@@ -24,7 +25,8 @@
    # If we print the statement with variable in double quotes (echo "") then the variables value executes successfully
    # If we print the statement with variables in single quotes (echo "") then the variables value prints as a simple text ($name stays $name)
 
-3. # Created greet.sh file
+
+3. ## Created greet.sh file
    file content
    #!/bin/bash
     echo "Enter Your Name"
@@ -34,7 +36,8 @@
     echo "Which Tool You Have to Install"
     read InstallTool
     echo "Hello $Name My Favourite Tool is $Tool, Installing $InstallTool..."
-    sudo apt install $InstallTool  -y
+    sudo apt install "$InstallTool"  -y
+
 
 4. ## Create check_number.sh file
     file content
@@ -66,7 +69,27 @@
       fi
    # Note: This Script Find both File & Directory
 
-5. 
 
 
-   
+5. ## Created server_check.sh file
+   file content
+
+   #!/bin/bash
+
+read -p "Enter Service Name: " ServiceName
+read -p "Do You Want To Check The Status? (y/n)" choice
+
+if [[ "$choice" == "y" ]]; then
+        status=$(systemctl is-active "$ServiceName")
+
+        if [[ "$status" == "active" ]]; then
+                echo "$ServiceName is Active"
+        else
+                echo "$ServiceName is Inactive"
+
+        fi
+
+else
+        echo "Skipped"
+
+fi
