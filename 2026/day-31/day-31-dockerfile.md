@@ -26,4 +26,4 @@ EXPOSE 80
 
 ### Step 6 CMD - Default Command When Container Start
 
-# CMD ["nginx", "-g" ]
+### CMD ["nginx", "-g" ]
