@@ -30,7 +30,7 @@ EXPOSE 80
 
 ## Task 3
 Used CMD and Entrypoint in Two Different File 
-When we use CMD Its Runs as a Default Command But When You Pass a Command After Image, Its Replaced With Actual Argument That We Provide 
+When we use CMD Its Runs as a Default Command But When we Pass a Command After Image, Its Replaced With Actual Argument That We Provide 
 ## File Content
 FROM ubuntu:latest 
 CMD ["echo", "Hello"]
@@ -38,3 +38,18 @@ CMD ["echo", "Hello"]
 Like If we add Hi Hello After Image Then Its Print Hi Hello  not only Hello like
 FROM ubuntu:latest:Hi Hello then its Replaced The Hello Completely because its Override The Actual Arguments.
 ~                         
+
+## Task 4
+Created Small Static index.html file under docker directory
+here is the Dockerfile Content 
+
+FROM nginx:alpine
+
+WORKDIR  /usr/share/nginx/html
+
+COPY index.html .
+
+RUN echo "Running index.html from Nginx"
+
+EXPOSE 80
+
