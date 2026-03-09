@@ -53,3 +53,21 @@ RUN echo "Running index.html from Nginx"
 
 EXPOSE 80
 
+## Task 5
+Created .dockerignore file under Health Plus App Directory
+here is the .dockerignore content
+
+#Ignore Common Development Files and Directories
+.git
+.md
+.env
+LICENSE
+node_modules
+
+**Note**: If We Build The Image Before Included .dockerignore file the build context size is larger 
+**Sending build context to Docker daemon  8.363MB**
+
+but when we include the .dockerignore file the build context size is decreased than before 
+**Sending build context to Docker daemon  3.804MB**
+
+**and also when we checked the ignored files under the container its not showed**
